@@ -1,40 +1,11 @@
-node_modules
-
-# Output
-.output
-.vercel
-.netlify
-.wrangler
-/.svelte-kit
-/build
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Env
-.env
-.env.*
-!.env.example
-!.env.test
-
-# Vite
-vite.config.js.timestamp-*
-vite.config.ts.timestamp-*
-
-# Python-related
+# Python
+venv/
 *.pyc
 __pycache__/
-*.log
-.vscode/
-.venv/
 
-# Node.js-related
+# Node.js
 node_modules/
-*.env
-.npmrc
-.svelte-kit/
+.env
 
-# Miscellaneous
-*.DS_Store
-
+# General
+.DS_Store
