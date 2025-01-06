@@ -48,3 +48,5 @@ node_modules/
 
 backend/app.log
 setup-backend
+node_modules/
+frontend/node_modules/
