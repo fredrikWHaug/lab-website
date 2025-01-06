@@ -1,38 +1,43 @@
-# sv
+Svelte Project
+A minimal and streamlined Svelte project setup.
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Setup
+To set up the project locally, clone the repository using:
 
-## Creating a project
+bash
+Copy code
+git clone <repository-url>
+Then navigate to the frontend directory:
 
-If you're seeing this, you've probably already done this step. Congrats!
+bash
+Copy code
+cd frontend
+Finally, install the dependencies:
 
-```bash
-# create a new project in the current directory
-npx sv create
+bash
+Copy code
+npm install
+Development
+To start the development server, run:
 
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+bash
+Copy code
 npm run dev
+For automatically opening the app in your default browser, use:
 
-# or start the server and open the app in a new browser tab
+bash
+Copy code
 npm run dev -- --open
-```
+Build for Production
+To create a production build of the project:
 
-## Building
-
-To create a production version of your app:
-
-```bash
+bash
+Copy code
 npm run build
-```
+You can preview the production build locally by running:
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+bash
+Copy code
+npm run preview
+Notes
+Ensure you have Node.js and npm installed on your machine. This project uses Svelte for the frontend.
