@@ -1,11 +1,2 @@
-# Python
-venv/
-*.pyc
-__pycache__/
-
-# Node.js
-node_modules/
-.env
-
-# General
-.DS_Store
+# Ignore backend app logs
+backend/app.log
