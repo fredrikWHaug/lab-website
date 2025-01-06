@@ -1,2 +1,6 @@
 # Ignore backend app logs
 backend/app.log
+.DS_Store
+backend/app/__pycache__/
+backend/venv/
+frontend/node_modules/
