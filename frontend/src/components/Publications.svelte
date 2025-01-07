@@ -1,116 +1,124 @@
 <script>
+  import { onMount } from 'svelte';
+  let fadeIn = false;
+
   let publications = [
-    { id: 1, title: "Brain-Computer Interfaces 101", year: 2023, category: "Review" },
-    { id: 2, title: "Advances in Neural Imaging", year: 2022, category: "Research" },
-    { id: 3, title: "Decoding Brain Signals", year: 2023, category: "Research" },
-    { id: 4, title: "Artificial Intelligence in Neuroscience", year: 2021, category: "Review" }
+    {
+      id: 1,
+      title: "Brain-Computer Interfaces: A Comprehensive Review",
+      year: 2023,
+      category: "Review",
+      link: "https://example.com/publication1"
+    },
+    {
+      id: 2,
+      title: "Neural Decoding with AI: Advances in 2023",
+      year: 2022,
+      category: "Research",
+      link: "https://example.com/publication2"
+    },
+    {
+      id: 3,
+      title: "Insights into Neural Signal Processing",
+      year: 2023,
+      category: "Research",
+      link: "https://example.com/publication3"
+    }
   ];
 
-  let filterYear = "All";
-  let filteredPublications = publications;
-
-  // Filter publications dynamically
-  function filterByYear() {
-    if (filterYear === "All") {
-      filteredPublications = publications;
-    } else {
-      filteredPublications = publications.filter(pub => pub.year.toString() === filterYear);
-    }
-  }
+  onMount(() => {
+    fadeIn = true;
+  });
 </script>
 
-<section id="publications" class="section">
-  <h2>Publications</h2>
+<section
+  id="publications"
+  class="publications-section fade-in"
+  class:fade-in={fadeIn}
+>
+  <h2 class="title">Publications</h2>
 
-  <!-- Filter Dropdown -->
-  <div class="filter">
-    <label for="year-filter">Filter by Year:</label>
-    <select id="year-filter" bind:value={filterYear} on:change={filterByYear}>
-      <option>All</option>
-      <option>2023</option>
-      <option>2022</option>
-      <option>2021</option>
-    </select>
-  </div>
-
-  <!-- Publications List -->
-  <ul class="publication-list">
-    {#each filteredPublications as pub}
-      <li class="publication-card">
-        <h3>{pub.title}</h3>
-        <p>Year: {pub.year} | Category: {pub.category}</p>
-      </li>
+  <div class="grid">
+    {#each publications as pub}
+      <a href={pub.link} target="_blank" class="card">
+        <h3 class="card-title">{pub.title}</h3>
+        <p class="card-meta">
+          Year: {pub.year} | Category: {pub.category}
+        </p>
+      </a>
     {/each}
-  </ul>
+  </div>
 </section>
 
 <style>
-  .section {
-    padding: 3rem 1rem;
-    border-top: 1px solid #333;
+  .publications-section {
+    padding: 5rem 1rem;
+    background-color: #121212;
+    color: #ffffff;
     text-align: center;
   }
 
-  h2 {
-    color: #FFD700;
-    margin-bottom: 2rem;
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--accent);
   }
 
-  .filter {
-    margin-bottom: 2rem;
-  }
-
-  select {
-    padding: 0.5rem;
-    border-radius: 4px;
-    border: 1px solid #555;
-    background: #1E1E1E;
-    color: #EAEAEA;
-  }
-
-  .publication-list {
-    list-style: none;
-    padding: 0;
+  .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  .publication-card {
-    background: #2E2E2E;
-    color: #EAEAEA;
+  .card {
+    background: #1e1e1e;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
 
-  .publication-card:hover {
+  .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   }
 
-  h3 {
-    margin: 0 0 0.5rem;
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
   }
 
-  p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #FFD700;
+  .card-meta {
+    font-size: 0.95rem;
+    color: #d1d1d1;
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
   }
 
   @media (max-width: 768px) {
-    .publication-card {
-      padding: 1rem;
+    .title {
+      font-size: 2rem;
     }
 
-    h3 {
+    .card-title {
       font-size: 1rem;
     }
 
-    p {
-      font-size: 0.8rem;
+    .card-meta {
+      font-size: 0.85rem;
     }
   }
 </style>
