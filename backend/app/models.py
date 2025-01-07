@@ -1,4 +1,4 @@
-# Placeholder for database models
-from flask_sqlalchemy import SQLAlchemy
+# # Placeholder for database models
+# from flask_sqlalchemy import SQLAlchemy
 
-db = SQLAlchemy()
+# db = SQLAlchemy()
