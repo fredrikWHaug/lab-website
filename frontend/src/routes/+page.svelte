@@ -70,6 +70,16 @@
 </section>
 
 <style>
+    /* Reset default margins and paddings */
+    html, body {
+        margin: 0;
+        padding: 0;
+        background: #000; /* Black background */
+        color: white;
+        height: 100%;
+        width: 100%;
+    }
+
     /* Hero Section Styles */
     .hero {
         display: flex;
@@ -110,13 +120,9 @@
     /* Scrolling Section Styles */
     .scroll-section {
         padding: 4rem 2rem;
-        background: #f9fafb; /* Light grey background */
-        color: #111827; /* Dark text */
-        border-top: 1px solid #e5e7eb;
-    }
-
-    .scroll-section:nth-child(even) {
-        background: #ffffff; /* Alternate section background */
+        background: #000; /* Black background for all sections */
+        color: white; /* White text to contrast */
+        border-top: none; /* Remove any visible borders */
     }
 
     .content {
@@ -128,13 +134,13 @@
     h2 {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
-        color: #1f2937; /* Darker heading color */
+        color: white; /* Ensure headings are visible */
     }
 
     p {
         font-size: 1.125rem;
         margin-bottom: 1.5rem;
-        color: #374151; /* Subtle text color */
+        color: white; /* Ensure text is readable */
     }
 
     ul {
@@ -147,7 +153,7 @@
     }
 
     ul li a {
-        color: #2563eb; /* Blue links */
+        color: #32cd32; /* Green links for readability */
         text-decoration: none;
         font-weight: 600;
     }
@@ -174,7 +180,7 @@
 
     .team-member p {
         font-size: 1rem;
-        color: #374151;
+        color: white;
     }
 
     /* Contact Form Styles */
@@ -186,7 +192,7 @@
 
     label {
         font-weight: 600;
-        color: #1f2937;
+        color: white;
     }
 
     input,
@@ -194,21 +200,23 @@
         width: 100%;
         padding: 0.75rem;
         font-size: 1rem;
-        border: 1px solid #d1d5db;
+        border: 1px solid #444; /* Darker border for consistency */
+        background: #222; /* Slightly lighter black */
+        color: white; /* White text */
         border-radius: 4px;
     }
 
     input:focus,
     textarea:focus {
         outline: none;
-        border-color: #2563eb;
-        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        border-color: #32cd32;
+        box-shadow: 0 0 0 3px rgba(50, 205, 50, 0.3);
     }
 
     button {
         padding: 0.75rem 1.5rem;
-        background-color: #2563eb;
-        color: white;
+        background-color: #32cd32; /* Green button */
+        color: black;
         border: none;
         border-radius: 4px;
         font-size: 1rem;
@@ -217,6 +225,6 @@
     }
 
     button:hover {
-        background-color: #1d4ed8;
+        background-color: #28a428;
     }
 </style>
