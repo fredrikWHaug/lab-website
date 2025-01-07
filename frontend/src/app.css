@@ -1,17 +1,99 @@
-@import './global.css';
-
-/* App-specific styles can go below this line */
-
-/* Example: Add a global animation */
-.fade-in {
-  animation: fadeIn 1s ease-in;
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0f172a; /* Dark background */
+  color: #e2e8f0; /* Light text */
+  line-height: 1.6;
+  scroll-behavior: smooth;
 }
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+  background: #000; /* Black background */
+  color: white;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #32cd32, #ff4500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-right {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Section Styles */
+section {
+  padding: 2rem;
+}
+
+#publications,
+#team,
+#contact {
+  background: #f5f5f5; /* Light grey background */
+  color: #333; /* Dark text */
+  margin: 2rem 0;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Add any button styles if needed */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.secondary {
+  background-color: transparent;
+  color: #94a3b8;
+  border: 1px solid #94a3b8;
+}
+
+button.secondary:hover {
+  color: white;
+  border-color: white;
+}
+
+
