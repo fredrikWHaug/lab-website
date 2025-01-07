@@ -1,4 +1,8 @@
-<section id="about" class="section">
+<script>
+  import { fade } from 'svelte/transition';
+</script>
+
+<section id="about" class="section" in:fade>
   <h2>About Us</h2>
   <p>Placeholder text for the lab's mission and research goals.</p>
 </section>
