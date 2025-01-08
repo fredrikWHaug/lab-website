@@ -1,1 +1,1 @@
-A svelte / flask app.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
