@@ -1,15 +1,19 @@
 <script>
   import { onMount } from 'svelte';
 
-  // Controls whether the hero section should display the fade-in animation.
+  // Props to receive heading and subheading
+  export let heading = '';
+  export let subheading = '';
+
+  // Controls whether the hero section should display the fade-in animation
   let fadeIn = false;
 
-  // Trigger the fade-in effect when the component is mounted.
+  // Trigger the fade-in effect when the component is mounted
   onMount(() => {
     fadeIn = true;
   });
 
-  // Smoothly scrolls to a section of the page identified by its ID.
+  // Smoothly scrolls to a section of the page identified by its ID
   function scrollToSection(id) {
     const section = document.querySelector(id);
     if (section) {
@@ -23,8 +27,8 @@
   class:fade-in={fadeIn}
 >
   <div class="content">
-    <h1 class="title">Innovating the Future of Neuroscience</h1>
-    <p class="subtitle">Explore cutting-edge research and transformative technology.</p>
+    <h1 class="title">{heading}</h1>
+    <p class="subtitle">{subheading}</p>
     <div class="cta-buttons">
       <button on:click={() => scrollToSection('#about')}>Learn More</button>
       <button on:click={() => scrollToSection('#contact')}>Get in Touch</button>
@@ -33,7 +37,7 @@
 </section>
 
 <style>
-  /* Main hero section: occupies full viewport height with a gradient background and centered content. */
+  /* Main hero section: occupies full viewport height with a gradient background and centered content */
   .hero {
     display: flex;
     justify-content: center;
@@ -47,7 +51,7 @@
     position: relative;
   }
 
-  /* Background image overlay with reduced opacity for a subtle effect. */
+  /* Background image overlay with reduced opacity for a subtle effect */
   .hero::before {
     content: '';
     position: absolute;
@@ -60,13 +64,13 @@
     z-index: 1;
   }
 
-  /* Ensures content appears above the background overlay. */
+  /* Ensures content appears above the background overlay */
   .content {
     position: relative;
     z-index: 2;
   }
 
-  /* Styling for the headline and supporting text. */
+  /* Styling for the headline and supporting text */
   .title {
     font-size: 3rem;
     font-weight: 700;
@@ -79,7 +83,7 @@
     color: #d1d1d1;
   }
 
-  /* Call-to-action buttons with hover effects. */
+  /* Call-to-action buttons with hover effects */
   .cta-buttons button {
     padding: 1rem 2rem;
     font-size: 1rem;
@@ -97,7 +101,7 @@
     background: #ff4500;
   }
 
-  /* Fade-in animation for the hero section. */
+  /* Fade-in animation for the hero section */
   .fade-in {
     opacity: 0;
     animation: fadeIn 1s forwards;
@@ -109,7 +113,7 @@
     }
   }
 
-  /* Adjustments for smaller screens to maintain readability. */
+  /* Adjustments for smaller screens to maintain readability */
   @media (max-width: 768px) {
     .title {
       font-size: 2rem;
