@@ -1,1 +1,1 @@
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![Badge Label](badge-url)
