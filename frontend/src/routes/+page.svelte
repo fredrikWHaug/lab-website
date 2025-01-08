@@ -1,73 +1,16 @@
 <script>
-    // Optional: Add interactivity or props
+    let heading = "Welcome to My Website";
+    let subheading = "Building a future for brain-computer interfaces.";
 </script>
 
-<!-- Hero Section -->
 <section class="hero">
-    <div class="hero-left">
-        <h1 class="hero-title">THE HOME FOR <br /><span class="highlight">TOUGH TECH</span></h1>
-    </div>
-    <div class="hero-right">
-        <p class="hero-text">
-            Our residents are <span class="highlight">Tough Tech</span> companies building solutions for a healthier, more productive, and more sustainable world.
-        </p>
+    <div class="hero-content">
+        <h1>{heading}</h1>
+        <p>{subheading}</p>
+        <button class="cta">Get Started</button>
     </div>
 </section>
 
-<!-- Publications Section -->
-<section id="publications" class="scroll-section">
-    <div class="content">
-        <h2>Publications</h2>
-        <p>Discover the latest research and innovations from our lab, pushing the boundaries of tough tech.</p>
-        <ul>
-            <li><a href="#">Publication 1: Breakthrough in Tough Tech</a></li>
-            <li><a href="#">Publication 2: Sustainable Solutions for the Future</a></li>
-            <li><a href="#">Publication 3: Productivity and Innovation</a></li>
-        </ul>
-    </div>
-</section>
-
-<!-- Team Section -->
-<section id="team" class="scroll-section">
-    <div class="content">
-        <h2>Team</h2>
-        <p>Meet the brilliant minds driving innovation in our lab.</p>
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member">
-                <p><strong>Dr. Jane Doe</strong><br>Lead Scientist</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member">
-                <p><strong>Dr. John Smith</strong><br>Researcher</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Team Member">
-                <p><strong>Ms. Alice Brown</strong><br>Engineer</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="scroll-section">
-    <div class="content">
-        <h2>Contact</h2>
-        <p>Have questions? Want to collaborate? Reach out to us today!</p>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your Name" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Your Email" required>
-            
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-</section>
 
 <style>
     /* Reset default margins and paddings */
