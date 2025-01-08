@@ -1,53 +1,44 @@
 <script>
+    // Static text variables for the hero section.
     let heading = "Welcome to My Website";
     let subheading = "Building a future for brain-computer interfaces.";
 </script>
 
 <section class="hero">
     <div class="hero-content">
+        <!-- Main heading and subheading for the hero section. -->
         <h1>{heading}</h1>
         <p>{subheading}</p>
+        <!-- Call-to-action button for initiating user interaction. -->
         <button class="cta">Get Started</button>
     </div>
 </section>
 
-
 <style>
-    /* Reset default margins and paddings */
+    /* Base styling for the page, setting a full black background and white text. */
     html, body {
         margin: 0;
         padding: 0;
-        background: #000; /* Black background */
+        background: #000;
         color: white;
         height: 100%;
         width: 100%;
     }
 
-    /* Hero Section Styles */
+    /* Styles for the hero section, ensuring it spans the full viewport height. */
     .hero {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 100vh;
         padding: 2rem;
-        background: #000; /* Black background */
+        background: #000; /* Consistent black background for branding. */
         color: white;
     }
 
+    /* Optional flex containers for structuring hero section content. */
     .hero-left {
         flex: 1;
-    }
-
-    .hero-title {
-        font-size: 4rem;
-        font-weight: bold;
-        line-height: 1.2;
-    }
-
-    .highlight {
-        background: linear-gradient(90deg, #32cd32, #ff4500);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
     }
 
     .hero-right {
@@ -55,17 +46,32 @@
         max-width: 500px;
     }
 
+    /* Main title styling for the hero section. */
+    .hero-title {
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    /* Highlighted text styling using a gradient fill. */
+    .highlight {
+        background: linear-gradient(90deg, #32cd32, #ff4500);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* General text styling for readability and consistency. */
     .hero-text {
         font-size: 1.5rem;
         line-height: 1.6;
     }
 
-    /* Scrolling Section Styles */
+    /* Styles for additional scrollable sections. */
     .scroll-section {
         padding: 4rem 2rem;
-        background: #000; /* Black background for all sections */
-        color: white; /* White text to contrast */
-        border-top: none; /* Remove any visible borders */
+        background: #000; /* Black background for continuity. */
+        color: white; /* High contrast text for readability. */
+        border-top: none; /* Clean transitions between sections. */
     }
 
     .content {
@@ -74,18 +80,20 @@
         text-align: center;
     }
 
+    /* Headings and paragraph styles for section content. */
     h2 {
         font-size: 2.5rem;
         margin-bottom: 1.5rem;
-        color: white; /* Ensure headings are visible */
+        color: white;
     }
 
     p {
         font-size: 1.125rem;
         margin-bottom: 1.5rem;
-        color: white; /* Ensure text is readable */
+        color: white;
     }
 
+    /* Styled list with green links for emphasis. */
     ul {
         list-style: none;
         padding: 0;
@@ -96,7 +104,7 @@
     }
 
     ul li a {
-        color: #32cd32; /* Green links for readability */
+        color: #32cd32;
         text-decoration: none;
         font-weight: 600;
     }
@@ -105,7 +113,7 @@
         text-decoration: underline;
     }
 
-    /* Team Grid Styles */
+    /* Grid-based team member layout with responsive support. */
     .team-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -117,7 +125,7 @@
     }
 
     .team-member img {
-        border-radius: 50%;
+        border-radius: 50%; /* Circular images for team members. */
         margin-bottom: 1rem;
     }
 
@@ -126,7 +134,7 @@
         color: white;
     }
 
-    /* Contact Form Styles */
+    /* Styling for a simple contact form with interactive focus states. */
     form {
         display: flex;
         flex-direction: column;
@@ -143,12 +151,13 @@
         width: 100%;
         padding: 0.75rem;
         font-size: 1rem;
-        border: 1px solid #444; /* Darker border for consistency */
-        background: #222; /* Slightly lighter black */
-        color: white; /* White text */
+        border: 1px solid #444;
+        background: #222;
+        color: white;
         border-radius: 4px;
     }
 
+    /* Highlight inputs on focus for accessibility and interaction feedback. */
     input:focus,
     textarea:focus {
         outline: none;
@@ -156,9 +165,10 @@
         box-shadow: 0 0 0 3px rgba(50, 205, 50, 0.3);
     }
 
+    /* Call-to-action button styles with hover effects for engagement. */
     button {
         padding: 0.75rem 1.5rem;
-        background-color: #32cd32; /* Green button */
+        background-color: #32cd32;
         color: black;
         border: none;
         border-radius: 4px;
