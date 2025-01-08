@@ -3,7 +3,7 @@ name: Deploy MkDocs site
 on:
   push:
     branches:
-      - main  # Replace 'main' with your branch name if different
+      - main  # Replace with your default branch
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material  # Adjust if using a different theme
+          pip install mkdocs mkdocs-material
 
       - name: Deploy to GitHub Pages
         run: |
