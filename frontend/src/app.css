@@ -1,35 +1,34 @@
-/* Global Resets */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: white;
+  text-align: center;
 }
 
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #0f172a; /* Dark background */
-  color: #e2e8f0; /* Light text */
-  line-height: 1.6;
-  scroll-behavior: smooth;
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
 }
 
-section {
-  padding: 2rem;
-  background: none;
+.hero-content p {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.cta {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
   border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-#publications,
-#team,
-#contact {
-  background: #f5f5f5; /* Light grey background */
-  color: #333; /* Dark text */
-  margin: 2rem 0;
-  border-radius: 8px;
-  padding: 1rem 2rem;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.cta:hover {
+  background-color: #1e3a8a;
 }
