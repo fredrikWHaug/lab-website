@@ -1,1 +1,1 @@
-![Badge Label](badge-url)
+## A simple Svelte/Flask website. 
