@@ -1,8 +1,0 @@
-site_name: Lab Website Documentation
-nav:
-  - Home: index.md
-  - Tech Stack: tech-stack.md
-  - Workflow: workflow.md
-  - Features: features.md
-  - Contribution: contribution.md
-  - Deployment: deployment.md
