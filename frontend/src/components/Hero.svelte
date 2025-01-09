@@ -1,126 +1,90 @@
 <script>
-  import { onMount } from 'svelte';
-
-  // Props to receive heading and subheading
   export let heading = '';
   export let subheading = '';
-
-  // Controls whether the hero section should display the fade-in animation
-  let fadeIn = false;
-
-  // Trigger the fade-in effect when the component is mounted
-  onMount(() => {
-    fadeIn = true;
-  });
-
-  // Smoothly scrolls to a section of the page identified by its ID
-  function scrollToSection(id) {
-    const section = document.querySelector(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
 </script>
 
-<section
-  class="hero"
-  class:fade-in={fadeIn}
->
-  <div class="content">
-    <h1 class="title">{heading}</h1>
-    <p class="subtitle">{subheading}</p>
-    <div class="cta-buttons">
-      <button on:click={() => scrollToSection('#about')}>Learn More</button>
-      <button on:click={() => scrollToSection('#contact')}>Get in Touch</button>
+<section class="hero">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Left: Search Section -->
+    <div class="search">
+      <span class="search-text">Search</span>
     </div>
-  </div>
+
+    <!-- Center: Navigation Links -->
+    <ul class="nav-links">
+      <li><a href="#companies">Companies</a></li>
+      <li><a href="#residency">Residency</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#ecosystem">Ecosystem</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
 </section>
 
 <style>
-  /* Main hero section: occupies full viewport height with a gradient background and centered content */
+  /* Hero Section */
   .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #000;
+    color: white;
     height: 100vh;
-    background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-    color: #ffffff;
-    text-align: center;
-    padding: 0 1rem;
-    overflow: hidden;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
   }
 
-  /* Background image overlay with reduced opacity for a subtle effect */
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+  /* Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
-    background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
-    opacity: 0.3;
-    z-index: 1;
-  }
-
-  /* Ensures content appears above the background overlay */
-  .content {
-    position: relative;
-    z-index: 2;
-  }
-
-  /* Styling for the headline and supporting text */
-  .title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-
-  .subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    color: #d1d1d1;
-  }
-
-  /* Call-to-action buttons with hover effects */
-  .cta-buttons button {
     padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Single underline for entire navbar */
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Search Section */
+  .search {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-text {
     font-size: 1rem;
-    margin: 0.5rem;
-    border: none;
-    border-radius: 4px;
-    color: #ffffff;
-    background: #ff7f50;
+    color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Underline for search */
   }
 
-  .cta-buttons button:hover {
-    transform: translateY(-5px);
-    background: #ff4500;
+  .search-text:hover {
+    color: white;
   }
 
-  /* Fade-in animation for the hero section */
-  .fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
+  /* Navigation Links */
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the links */
+    gap: 2rem; /* Spacing between links */
   }
 
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
+  .nav-links li {
+    list-style: none;
   }
 
-  /* Adjustments for smaller screens to maintain readability */
-  @media (max-width: 768px) {
-    .title {
-      font-size: 2rem;
-    }
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    transition: color 0.3s;
+  }
 
-    .subtitle {
-      font-size: 1rem;
-    }
+  .nav-links a:hover {
+    color: #fbbd08;
   }
 </style>
