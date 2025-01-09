@@ -1,3 +1,15 @@
+/* Global styles for the entire website */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* Background consistent with branding */
+  color: white;
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif; /* Choose a global font */
+}
+
+/* Hero Section */
 .hero {
   height: 100vh;
   display: flex;
@@ -8,6 +20,7 @@
   text-align: center;
 }
 
+/* Hero Content */
 .hero-content h1 {
   font-size: 3rem;
   font-weight: bold;
@@ -18,6 +31,7 @@
   margin: 1rem 0;
 }
 
+/* Call-to-action Button */
 .cta {
   background-color: #2563eb;
   color: white;
