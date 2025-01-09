@@ -1,7 +1,3 @@
-<script>
-  export let heading = '';
-  export let subheading = '';
-</script>
 
 <section class="hero">
   <!-- Navigation Bar -->
