@@ -1,13 +1,9 @@
-
 <section class="hero">
-  <!-- Navigation Bar -->
   <nav class="navbar">
-    <!-- Left: Search Section -->
     <div class="search">
       <span class="search-text">Search</span>
     </div>
 
-    <!-- Center: Navigation Links -->
     <ul class="nav-links">
       <li><a href="#companies">Companies</a></li>
       <li><a href="#residency">Residency</a></li>
@@ -19,7 +15,6 @@
 </section>
 
 <style>
-  /* Hero Section */
   .hero {
     background-color: #000;
     color: white;
@@ -30,7 +25,6 @@
     padding: 0;
   }
 
-  /* Navbar */
   .navbar {
     display: flex;
     align-items: center;
@@ -41,7 +35,6 @@
     font-family: "Inter", sans-serif;
   }
 
-  /* Search Section */
   .search {
     flex: 0 1 auto;
     display: flex;
@@ -59,12 +52,11 @@
     color: white;
   }
 
-  /* Navigation Links */
   .nav-links {
     flex: 1;
     display: flex;
-    justify-content: center; /* Center the links */
-    gap: 2rem; /* Spacing between links */
+    justify-content: center;
+    gap: 2rem; 
   }
 
   .nav-links li {

@@ -2,4 +2,6 @@
   import Hero from '../components/Hero.svelte';
 </script>
 
-<Hero heading="pass"/>
+<Hero>
+  
+</Hero>
