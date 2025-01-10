@@ -3,5 +3,5 @@
 </script>
 
 <Hero>
-  
+    <!-- pass -->
 </Hero>
