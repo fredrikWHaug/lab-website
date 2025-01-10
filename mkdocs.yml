@@ -1,7 +1,0 @@
-site_name: My Application Docs
-theme:
-  name: material
-nav:
-  - Home: index.md
-  - Guide: guide.md
-  - FAQ: faq.md
