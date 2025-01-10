@@ -1,14 +1,14 @@
 <!-- Hero Section -->
 <section class="hero">
+  <div class="logo-container">
+    <img
+      src="https://soldered.com/productdata/2023/03/schematic-bjt-npn.png"
+      alt="Logo"
+      class="logo"
+      aria-label="Logo"
+    />
+  </div>
   <nav class="navbar">
-    <div class="logo-container">
-      <img
-        src="https://soldered.com/productdata/2023/03/schematic-bjt-npn.png"
-        alt="Logo"
-        class="logo"
-        aria-label="Logo"
-      />
-    </div>
     <div class="navbar-content">
       <div class="search">
         <input
@@ -42,13 +42,34 @@
     padding: 0;
   }
 
+  .logo-container {
+    position: absolute; /* Allows precise positioning */
+    margin-top: 1.9rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center; /* Keeps the logo vertically centered if necessary */
+  }
+
+  .logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%; /* Keeps the circular logo */
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .logo:hover {
+    transform: scale(1.1); /* Subtle increase in size on hover */
+  }
+
   .navbar {
     display: flex;
-    align-items: flex-end; /* Keeps the alignment of the navbar as requested */
+    align-items: flex-end;
     justify-content: flex-end;
     width: 100%;
     padding: 1rem 2rem;
     font-family: "Inter", sans-serif;
+    margin-top: 2rem; /* Ensures the navbar does not have extra vertical spacing */
   }
 
   .navbar-content {
@@ -60,35 +81,14 @@
     padding-bottom: 0.5rem;
   }
 
-  .logo-container {
-    margin-top: 0.5rem; /* Adjust this value to move the logo down */
-    margin-right: auto; /* Keeps the logo aligned to the far left */
-    display: flex;
-    align-items: center; /* Ensures vertical centering within the container */
-  }
-
-
-
-  .logo {
-    width: 75px; /* Maintains increased size */
-    height: 75px; /* Maintains proportions */
-    border-radius: 50%; /* Makes the logo circular */
-    object-fit: cover;
-    transition: transform 0.3s;
-  }
-
-  .logo:hover {
-    transform: scale(1.1); /* Subtle increase in size on hover */
-  }
-
   .search {
     flex: 0 1 auto;
     display: flex;
     align-items: center;
-    margin-right: 2rem; /* Adjust spacing from the next word */
+    margin-right: 2rem;
     padding: 0.3rem 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 0; /* Sharp edges */
+    border-radius: 0;
     transition: border 0.3s, background-color 0.3s;
   }
 
@@ -108,9 +108,9 @@
 
   .nav-links {
     display: flex;
-    justify-content: flex-end; /* Aligns links closer to the right */
+    justify-content: flex-end;
     gap: 2rem;
-    padding-right: 1rem; /* Adds natural spacing from the right edge */
+    padding-right: 1rem;
   }
 
   .nav-links li {
