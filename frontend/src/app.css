@@ -9,29 +9,14 @@ html, body {
   font-family: 'Arial', sans-serif; /* Choose a global font */
 }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
-  color: white;
-  text-align: center;
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Hero Content */
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.hero-content p {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-}
-
-/* Call-to-action Button */
+/* Shared Components */
 .cta {
   background-color: #2563eb;
   color: white;
