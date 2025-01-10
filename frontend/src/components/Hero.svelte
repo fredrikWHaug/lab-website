@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="logo-container">
     <img
-      src="https://soldered.com/productdata/2023/03/schematic-bjt-npn.png"
+      src="https://www.ledr.com/colours/white.jpg"
       alt="Logo"
       class="logo"
       aria-label="Logo"
@@ -44,8 +44,8 @@
 
   .logo-container {
     position: absolute; /* Allows precise positioning */
-    margin-top: 1.9rem;
-    margin-left: 2rem;
+    margin-top: 1.98rem;
+    margin-left: 2.8rem;
     display: flex;
     align-items: center; /* Keeps the logo vertically centered if necessary */
   }
