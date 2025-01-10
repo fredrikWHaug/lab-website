@@ -1,3 +1,4 @@
+<!--Hero section-->
 <section class="hero">
   <nav class="navbar">
     <div class="search">
@@ -14,6 +15,7 @@
   </nav>
 </section>
 
+<!--Style section-->
 <style>
   .hero {
     background-color: #000;
