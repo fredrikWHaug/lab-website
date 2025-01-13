@@ -20,14 +20,22 @@
       </div>
 
       <ul class="nav-links">
-        <li><a href="#companies">Companies</a></li>
-        <li><a href="#residency">Residency</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#ecosystem">Ecosystem</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#people">People</a></li>
+        <li><a href="#openings">Openings</a></li>
+        <li><a href="#press">Press</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#pictures">Pictures</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
+  <div class="hero-text">
+    <p>
+      Using our specialized experimental and computational expertise, we aim to understand the relationship between the population dynamics of single-cell multimodal physiology and gene expression and the functions and dysfunctions of whole organs and organisms. Our research addresses questions in the field of brain-computer interfaces, neuroengineering, and stem cell engineering.
+    </p>
+  </div>
 </section>
 
 <!-- Style Section -->
@@ -43,23 +51,23 @@
   }
 
   .logo-container {
-    position: absolute; /* Allows precise positioning */
-    margin-top: 1.98rem;
+    position: absolute;
+    margin-top: 1.5rem;
     margin-left: 2.8rem;
     display: flex;
-    align-items: center; /* Keeps the logo vertically centered if necessary */
+    align-items: center;
   }
 
   .logo {
     width: 75px;
     height: 75px;
-    border-radius: 50%; /* Keeps the circular logo */
+    border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s;
   }
 
   .logo:hover {
-    transform: scale(1.1); /* Subtle increase in size on hover */
+    transform: scale(1.1);
   }
 
   .navbar {
@@ -69,7 +77,7 @@
     width: 100%;
     padding: 1rem 2rem;
     font-family: "Inter", sans-serif;
-    margin-top: 2rem; /* Ensures the navbar does not have extra vertical spacing */
+    margin-top: 2rem;
   }
 
   .navbar-content {
@@ -109,7 +117,8 @@
   .nav-links {
     display: flex;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 1.5rem; /* Adjusted spacing to accommodate more links */
+    flex-wrap: wrap; /* Wraps items if needed */
     padding-right: 1rem;
   }
 
@@ -120,7 +129,7 @@
   .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Adjusted font size slightly to fit content */
     font-weight: 500;
     padding-bottom: 0.5rem;
     transition: color 0.3s, border-bottom 0.3s;
@@ -129,6 +138,24 @@
   .nav-links a:hover {
     color: white;
     border-bottom: 2px solid white;
+  }
+
+  .hero-text {
+    margin: auto 2rem;
+    font-family: "Inter", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 45%;
+    text-align: justify;
+    position: absolute;
+    right: 2rem;
+    top: 15%;
+  }
+
+  .hero-text p {
+    margin: 0;
   }
 
   @media (max-width: 768px) {
@@ -145,6 +172,12 @@
 
     .search {
       margin-bottom: 1rem;
+    }
+
+    .hero-text {
+      margin: 1rem;
+      font-size: 1rem;
+      max-width: 100%;
     }
   }
 </style>
