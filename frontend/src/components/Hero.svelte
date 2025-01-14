@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="logo-container">
     <img
-      src="logo_bw.png"
+      src="/logo.png"
       alt="Logo"
       class="logo"
       aria-label="Logo"
@@ -61,10 +61,9 @@
   }
 
   .logo {
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: auto; /* Preserve the native aspect ratio of the image */
+    height: 75px; /* Adjust height as needed */
+    object-fit: contain; /* Ensure the image scales properly without cropping */
     transition: transform 0.3s;
   }
 

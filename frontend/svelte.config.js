@@ -3,16 +3,16 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://svelte.dev/docs/kit/integrations for more information about preprocessors
+	// Use Vite preprocess for handling Svelte files
 	preprocess: vitePreprocess(),
 
 	kit: {
 		// Adapter for building the application
 		adapter: adapter(),
 
-		// Ensures app.css is globally applied
+		// Default static directory for assets
 		files: {
-			assets: 'src'
+			assets: 'static', // Ensure static files are served from the static folder
 		}
 	}
 };
