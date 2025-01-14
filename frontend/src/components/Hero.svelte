@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="logo-container">
     <img
-      src="https://www.ledr.com/colours/white.jpg"
+      src="logo_bw.png"
       alt="Logo"
       class="logo"
       aria-label="Logo"
