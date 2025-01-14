@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "./backend/venv/bin/python"
+    "python.pythonPath": "./backend/venv/bin/python",
+    "git.enabled": false
 }
