@@ -52,4 +52,6 @@ setup-backend
 node_modules/
 frontend/node_modules/
 dist/
+frontend/.svelte-kit/
+frontend/node_modules/
 *.log
