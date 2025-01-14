@@ -32,7 +32,9 @@
     </div>
   </nav>
   <div class="hero-text">
-    <p>
+    <p style="color: white;">
+      Pictures
+      Contact
       Using our specialized experimental and computational expertise, we aim to understand the relationship between the population dynamics of single-cell multimodal physiology and gene expression and the functions and dysfunctions of whole organs and organisms. Our research addresses questions in the field of brain-computer interfaces, neuroengineering, and stem cell engineering.
     </p>
   </div>
@@ -117,8 +119,8 @@
   .nav-links {
     display: flex;
     justify-content: flex-end;
-    gap: 1.5rem; /* Adjusted spacing to accommodate more links */
-    flex-wrap: wrap; /* Wraps items if needed */
+    gap: 1.5rem;
+    flex-wrap: wrap;
     padding-right: 1rem;
   }
 
@@ -129,7 +131,7 @@
   .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 0.9rem; /* Adjusted font size slightly to fit content */
+    font-size: 0.9rem;
     font-weight: 500;
     padding-bottom: 0.5rem;
     transition: color 0.3s, border-bottom 0.3s;
