@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="logo-container">
     <img
-      src="logo_bw.png"
+      src="/logo.png"
       alt="Logo"
       class="logo"
       aria-label="Logo"
