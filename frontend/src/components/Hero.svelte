@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="logo-container">
     <img
-      src="/logo.png"
+      src="/red_logo.png"
       alt="Logo"
       class="logo"
       aria-label="Logo"
@@ -32,11 +32,6 @@
     </div>
   </nav>
   <div class="hero-text">
-    <p style="color: white;">
-      Pictures
-      Contact
-      Using our specialized experimental and computational expertise, we aim to understand the relationship between the population dynamics of single-cell multimodal physiology and gene expression and the functions and dysfunctions of whole organs and organisms. Our research addresses questions in the field of brain-computer interfaces, neuroengineering, and stem cell engineering.
-    </p>
   </div>
 </section>
 
@@ -54,7 +49,7 @@
 
   .logo-container {
     position: absolute;
-    margin-top: 1.5rem;
+    margin-top: 1.9rem;
     margin-left: 2.8rem;
     display: flex;
     align-items: center;
